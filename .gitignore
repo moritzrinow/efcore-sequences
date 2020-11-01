@@ -1,0 +1,6 @@
+.vs/
+bin/
+obj/
+.idea/
+EntityFrameworkCore.Sequences.sln.DotSettings.user
+/src/EntityFrameworkCore.Extensions.Sequences.Test/appsettings.local.json
