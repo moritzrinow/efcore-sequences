@@ -1,6 +1,8 @@
 # EntityFrameworkCore.Extensions.Sequences
 EntityFrameworkCore extensions for operations on sequences.
 
+**This project is still in the making and highly experimental. Feel free to contribute via PRs.**
+
 # Table of contents
 - [Targets](#targets)
 - [Installation](#installation)
