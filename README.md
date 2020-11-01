@@ -15,7 +15,7 @@ EntityFrameworkCore extensions for operations on sequences.
 - [Limitations](#limitations)
 
 # Targets
-- .NET Core 3.1
+- EF Core 3.1
 
 # Installation
 ## Nuget packages
