@@ -9,7 +9,7 @@
         <RepositoryUrl>https://github.com/moritzrinow/efcore-sequences</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>5.0.15.1</PackageVersion>
+        <PackageVersion>5.0.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

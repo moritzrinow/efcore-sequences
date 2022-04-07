@@ -8,7 +8,7 @@
         <RepositoryUrl>https://github.com/moritzrinow/efcore-sequences</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryType>github</RepositoryType>
-        <PackageVersion>5.0.15.1</PackageVersion>
+        <PackageVersion>5.0.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
