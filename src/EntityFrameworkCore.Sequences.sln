@@ -12,9 +12,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore.Extensions.Sequences.Test", "EntityFrameworkCore.Extensions.Sequences.Test\EntityFrameworkCore.Extensions.Sequences.Test.csproj", "{DC764EFF-4B56-49CE-86C6-DF11EA24230D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC724D13-517F-4097-A919-79B2B949639D}"
-	ProjectSection(SolutionItems) = preProject
-		nuget.config = nuget.config
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
