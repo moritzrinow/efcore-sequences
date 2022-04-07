@@ -65,10 +65,10 @@
            ? new NextValueExpression(instance, arguments, Type, TypeMapping)
            : this;
 
-    public override void Print(ExpressionPrinter expressionPrinter)
+    protected override void Print(ExpressionPrinter expressionPrinter)
     {
       expressionPrinter.Append(this.Function);
-      expressionPrinter.VisitList(this.Arguments);
+      expressionPrinter.VisitCollection(this.Arguments);
     }
     
     public override bool Equals(object obj)
