@@ -88,7 +88,7 @@
       };
 
       var sql =
-        $"SELECT @result = (NEXT VALUE FOR {name})";
+        $"SELECT @result = (NEXT VALUE FOR [{name}])";
 
       var res = this.context.Database.ExecuteSqlRaw(sql, new object[] {result});
 
@@ -104,7 +104,7 @@
         connection.Open();
       }
 
-      var name = sequence.Schema != null ? $"{sequence.Schema}.{sequence.Name} " : sequence.Name;
+      var name = sequence.Schema != null ? $"[{sequence.Schema}].[{sequence.Name}] " : $"[{sequence.Name}]";
       var start = sequence.StartValue != null ? $"START WITH {sequence.StartValue} " : "";
       var increment = sequence.IncrementBy != null ? $"INCREMENT BY {sequence.IncrementBy} " : "";
       var min = sequence.MinValue != null ? $"MINVALUE {sequence.MinValue} " : "NO MINVALUE ";
@@ -171,7 +171,7 @@
       var cache = update.CacheSize != null ? (update.CacheSize.Value > 0 ? $"CACHE {update.CacheSize}" : "NO CACHE") : "";
 
       var sql =
-        $"ALTER SEQUENCE {name} " +
+        $"ALTER SEQUENCE [{name}] " +
         $"{restart} " +
         $"{increment}" +
         $"{min} " +
@@ -196,7 +196,7 @@
       var sql =
         $"DROP SEQUENCE " +
         (conditionally ? $"IF EXISTS " : "") +
-        $"{name}";
+        $"[{name}]";
 
       var result = this.context.Database.ExecuteSqlRaw(sql);
 
@@ -246,7 +246,7 @@
       };
 
       var sql =
-        $"SELECT @result = (NEXT VALUE FOR {name})";
+        $"SELECT @result = (NEXT VALUE FOR [{name}])";
 
       var res = await this.context.Database.ExecuteSqlRawAsync(sql, new object[] {result}, ct);
 
@@ -271,7 +271,7 @@
       var cache = update.CacheSize != null ? (update.CacheSize.Value > 0 ? $"CACHE {update.CacheSize}" : "NO CACHE") : "";
 
       var sql =
-        $"ALTER SEQUENCE {name} " +
+        $"ALTER SEQUENCE [{name}] " +
         $"{restart} " +
         $"{increment}" +
         $"{min} " +

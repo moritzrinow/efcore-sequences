@@ -31,7 +31,7 @@ namespace EntityFrameworkCore.Extensions.Sequences.Test
       if (this.Configuration.GetValue<bool>("TestOptions:RunTestServices"))
       {
         services.AddTransient<ITestService, SqlServerTest>();
-        services.AddTransient<ITestService, NpgsqlTest>();
+        //services.AddTransient<ITestService, NpgsqlTest>();
         services.AddHostedService<TestSuiteService>();
       }
     }
